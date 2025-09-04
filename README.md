@@ -1,11 +1,11 @@
-# 🌫️ Air Pollution Forecasting with LSTM
+#  Air Pollution Forecasting with LSTM
 
 This project uses **deep learning (LSTM)** to predict air pollution levels based on historical weather and pollution data.  
 It demonstrates **time-series forecasting** using feature engineering, scaling, and sequence modeling with TensorFlow/Keras.
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
 Air pollution is a critical urban problem. This project builds a model that learns from:
 - Past pollution levels
@@ -16,7 +16,7 @@ and predicts future pollution values using a **stacked LSTM neural network**.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Python** 3.x  
 - **Libraries:**  
@@ -27,7 +27,7 @@ and predicts future pollution values using a **stacked LSTM neural network**.
 
 ---
 
-## 📂 Dataset
+##  Dataset
 
 - **Training Dataset:** `LSTM-Multivariate_pollution.csv.zip`  
 - **Testing Dataset:** `pollution_test_data1.csv`  
@@ -50,7 +50,7 @@ Additional **engineered features** include:
 
 ---
 
-## 📊 Approach
+##  Approach
 
 1. **Data Preprocessing**
    - Handle missing values
@@ -82,7 +82,7 @@ Additional **engineered features** include:
 
 ---
 
-## 📈 Results (Sample)
+##  Results (Sample)
 
 | Dataset | MAE | RMSE | R² |
 |--------|------|------|----|
