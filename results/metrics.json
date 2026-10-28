@@ -1,0 +1,116 @@
+{
+  "task": "Predict pollution (PM2.5, micrograms per cubic meter) one hour ahead using the prior 24 hours.",
+  "data_source": "https://www.kaggle.com/datasets/rupakroy/lstm-datasets-multivariate-univariate",
+  "split": {
+    "train": {
+      "targets": 26256,
+      "end_exclusive": "2013-01-01"
+    },
+    "validation": {
+      "targets": 8760,
+      "start": "2013-01-01",
+      "end_exclusive": "2014-01-01"
+    },
+    "test": {
+      "targets": 8760,
+      "start": "2014-01-01",
+      "end": "2014-12-31 23:00:00"
+    }
+  },
+  "features_per_hour": [
+    "pollution",
+    "dew",
+    "temp",
+    "press",
+    "wnd_spd",
+    "snow",
+    "rain",
+    "wind_SE",
+    "wind_cv",
+    "wind_NW",
+    "wind_NE",
+    "hour_sin",
+    "hour_cos",
+    "year_sin",
+    "year_cos"
+  ],
+  "lookback_hours": 24,
+  "epochs_completed": 12,
+  "best_validation_epoch": 12,
+  "versions": {
+    "tensorflow": "2.19.0",
+    "sklearn": "1.7.1",
+    "pandas": "2.2.2",
+    "numpy": "1.26.4"
+  },
+  "metrics": {
+    "persistence": {
+      "train": {
+        "mae": 13.1744,
+        "rmse": 28.0833,
+        "r2": 0.9018
+      },
+      "validation": {
+        "mae": 13.9676,
+        "rmse": 28.884,
+        "r2": 0.9133
+      },
+      "test": {
+        "mae": 12.4298,
+        "rmse": 24.5147,
+        "r2": 0.9314
+      }
+    },
+    "seasonal_persistence": {
+      "train": {
+        "mae": 66.9919,
+        "rmse": 98.8491,
+        "r2": -0.2161
+      },
+      "validation": {
+        "mae": 76.3027,
+        "rmse": 110.4505,
+        "r2": -0.2678
+      },
+      "test": {
+        "mae": 67.9166,
+        "rmse": 100.1784,
+        "r2": -0.1463
+      }
+    },
+    "ridge": {
+      "train": {
+        "mae": 13.8024,
+        "rmse": 26.8211,
+        "r2": 0.9105
+      },
+      "validation": {
+        "mae": 14.4488,
+        "rmse": 27.9053,
+        "r2": 0.9191
+      },
+      "test": {
+        "mae": 12.9155,
+        "rmse": 23.7451,
+        "r2": 0.9356
+      }
+    },
+    "lstm": {
+      "train": {
+        "mae": 14.5136,
+        "rmse": 26.3753,
+        "r2": 0.9134
+      },
+      "validation": {
+        "mae": 15.2196,
+        "rmse": 28.7972,
+        "r2": 0.9138
+      },
+      "test": {
+        "mae": 13.6148,
+        "rmse": 24.0143,
+        "r2": 0.9341
+      }
+    }
+  }
+}
